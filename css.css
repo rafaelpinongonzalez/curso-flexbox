@@ -1,0 +1,78 @@
+html {
+    font-family: 'Oxygen', sans-serif;
+}
+body {
+    margin: 0px;
+}
+.navegador {
+    background: #415068;
+}
+.navegador div {
+    display: none;
+}
+.navegador .toggle,
+.navegador .nombre {
+    display: inline-block;
+}
+.navegador .link {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    background: #223047;
+    color: white;
+}
+.navegador .link:hover,
+.navegador .link:active {
+    color: #223047;
+    background: white;
+}
+.navegador .nombre {
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+.navegador a {
+    text-decoration: none;
+}
+.navegador .toggle {
+    padding: 1em;
+    color: black;
+}
+@media (min-width: 48em) {
+    .navegador {
+        display: flex;
+    }
+    .navegador .izquierda,
+    .navegador .derecha {
+        display: flex;
+        flex: 1;
+    }
+    .navegador .link {
+        width: auto;
+    }
+    .navegador .derecha {
+        justify-content: flex-end;
+    }
+    .navegador .toggle {
+        display: none;
+    }
+}
+@media (min-width: 48em) {
+    .navegador div {
+        display: flex;
+    }
+}
+@media (max-width: 48em) {
+    .navegador.active .toggle {
+        background: #223047;
+        color: white;
+    }
+    .navegador .nombre {
+        text-align: izquierda;
+    }
+    .navegador.active div {
+        display: block;
+    }
+}
